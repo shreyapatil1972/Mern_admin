@@ -1,0 +1,179 @@
+/* src/components/Product/ProductDetails.css */
+
+.product-details-page-container {
+    padding: 2rem; /* Add some overall padding to the page container */
+}
+
+/* --- Back Button --- */
+.back-button {
+    background-color: var(--color-light); /* Light Periwinkle */
+    color: var(--color-dark) !important; /* Dark Navy text */
+    border: none !important;
+    border-radius: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: inline-flex; /* Align icon and text */
+    align-items: center;
+}
+
+.back-button:hover {
+    background-color: var(--color-medium) !important; /* Medium Periwinkle on hover */
+    color: var(--color-lightest) !important; /* Lightest text on hover */
+    transform: translateY(-2px); /* Slight lift */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.back-button-icon {
+    margin-right: 0.5rem;
+    font-size: 1.1rem;
+}
+
+/* --- Product Details Card --- */
+.product-details-card {
+    background-color: var(--color-lightest); /* Pale Pink/Off-White for the card */
+    border: 1px solid var(--color-light); /* Light Periwinkle border */
+    border-radius: 1rem; /* More rounded for a modern, soft look */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12); /* Pronounced, elegant shadow */
+    overflow: hidden; /* Ensure image corners are rounded */
+    transition: all 0.3s ease; /* Smooth effects */
+}
+
+.product-details-card:hover {
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18); /* Deeper shadow on hover */
+}
+
+.product-image-col {
+    padding: 1.5rem !important; /* Add padding to the column containing the image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-details-img {
+    width: 100%;
+    max-height: 400px; /* Increased max-height for better visual */
+    object-fit: cover;
+    border-radius: 0.75rem; /* Rounded image corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow for the image */
+    transition: transform 0.4s ease; /* Smooth zoom on hover */
+}
+
+.product-details-card:hover .product-details-img {
+    transform: scale(1.03); /* Subtle zoom effect on image when card is hovered */
+}
+
+.product-info-col {
+    padding: 2rem !important; /* Add padding to the information column */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically if space allows */
+}
+
+.product-details-body {
+    padding: 0 !important; /* Remove default Card.Body padding if parent column has it */
+}
+
+.product-details-title {
+    font-size: 2.8rem; /* Large, bold title for impact */
+    font-weight: 700;
+    color: var(--color-dark); /* Deep Navy for main title */
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.product-details-description {
+    font-size: 1.1rem;
+    color: var(--color-dark);
+    margin-bottom: 2rem; /* More space below description */
+    line-height: 1.7;
+}
+
+.product-details-specs p {
+    margin-bottom: 0.8rem; /* Spacing between spec lines */
+    font-size: 1.05rem;
+    color: var(--color-dark);
+}
+
+.spec-label {
+    color: var(--color-medium); /* Medium Periwinkle for labels */
+    font-weight: 600;
+    margin-right: 0.5rem;
+}
+
+.spec-value {
+    color: var(--color-dark); /* Dark Navy for values */
+}
+
+.spec-value.in-stock {
+    color: #28a745; /* Bootstrap green for 'Yes' */
+    font-weight: 600;
+}
+
+.spec-value.out-of-stock {
+    color: var(--color-danger); /* Red for 'No' using your theme danger color */
+    font-weight: 600;
+}
+
+/* --- Action Buttons --- */
+/* src/components/Product/ProductDetails.css */
+
+/* ... (previous CSS code) ... */
+
+/* --- Action Buttons --- */
+.edit-button,
+.delete-button {
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    /* Ensure no default Bootstrap border interferes */
+    border: none !important;
+}
+
+.edit-button {
+    background-color: var(--color-medium) !important; /* Medium Periwinkle for Edit */
+    color: var(--color-lightest) !important; /* Lightest text */
+}
+
+.edit-button:hover {
+    background-color: var(--color-dark) !important; /* Dark Navy on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.delete-button {
+    /* FIX START */
+    background-color: var(--color-danger) !important; /* Explicitly set to your defined danger red */
+    color: var(--color-dark) !important; /* Ensure text is light for contrast */
+    /* FIX END */
+}
+
+.delete-button:hover {
+    background-color: #c82333 !important; /* Slightly darker red on hover for visual feedback */
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* ... (rest of your CSS code) ... */
+/* --- Loading/Error Styles --- */
+.product-details-spinner {
+    color: var(--color-medium) !important;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-width: 0.35em !important;
+}
+
+.loading-text,
+.product-details-error,
+.product-details-no-data {
+    color: var(--color-dark);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.product-details-error {
+    color: var(--color-danger); /* Use danger color for error message */
+}

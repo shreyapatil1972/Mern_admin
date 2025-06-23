@@ -1,0 +1,127 @@
+  
+.product-header-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem; /* More space below header */
+}
+
+.product-list-title {
+    color: var(--color-dark); /* Dark Navy for the title */
+    font-size: 2.5rem; /* Larger, more impactful title */
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.add-product-btn {
+    background-color: var(--color-medium) !important; /* Medium Periwinkle for button */
+    color: var(--color-lightest) !important; /* Lightest text color for button */
+    font-weight: 600;
+    border: none !important; /* Remove default button border */
+    border-radius: 0.75rem !important; /* Slightly more rounded */
+    padding: 0.7rem 1.8rem !important; /* Generous padding */
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.add-product-btn:hover {
+    background-color: var(--color-dark) !important; /* Darker periwinkle on hover */
+    transform: translateY(-3px); /* Lift effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+}
+
+.product-divider {
+    border-top: 1px solid var(--color-light); /* Light Periwinkle for divider */
+    opacity: 0.8; /* Slightly transparent */
+    margin-bottom: 3rem; /* More space below divider */
+}
+
+/* --- Loading and Error States --- */
+.product-spinner {
+    color: var(--color-medium) !important; /* Medium Periwinkle spinner */
+    width: 3.5rem; /* Larger spinner */
+    height: 3.5rem;
+    border-width: 0.35em !important;
+}
+
+.product-error-message,
+.product-no-items {
+    color: var(--color-dark); /* Dark Navy for text */
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 4rem; /* More vertical spacing */
+}
+
+/* --- Product Card Styling --- */
+.product-card {
+    cursor: pointer;
+    background-color: var(--color-lightest); /* Pale Pink/Off-White for card background */
+    border: 1px solid var(--color-light); /* Light Periwinkle border */
+    border-radius: 0.8rem; /* Consistent rounding */
+    color: var(--color-text-dark); /* Dark Navy text inside card */
+    height: 100%; /* Ensures cards in a row have equal height */
+    overflow: hidden; /* Important for image border-radius */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Initial subtle shadow */
+}
+
+.product-card:hover {
+    transform: translateY(-8px); /* More pronounced lift on hover */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+.product-card-img {
+    height: 220px; /* Slightly taller images */
+    object-fit: cover;
+    border-top-left-radius: 0.7rem; /* Match card radius for top corners */
+    border-top-right-radius: 0.7rem;
+    transition: transform 0.3s ease; /* Image zoom effect on hover */
+}
+
+.product-card:hover .product-card-img {
+    transform: scale(1.05); /* Slight zoom on image on card hover */
+}
+
+.product-card-body {
+    padding: 1.5rem; /* Generous padding inside card body */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes price to bottom if content varies */
+}
+
+.product-card-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-dark); /* Dark Navy for title */
+    margin-bottom: 0.5rem;
+}
+
+.product-card-price {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--color-medium); /* Medium Periwinkle for price */
+    margin-top: 1rem; /* Space between title and price */
+}
+/* Product Count Specific Styles */
+
+.product-count {
+    font-size: 1.1rem; /* Slightly larger for readability */
+    color: var(--color-medium); /* Uses your Medium Periwinkle for a soft, informative look */
+    font-weight: 600; /* Bolder to stand out more */
+    margin-top: 0.5rem; /* A little space below the main title */
+    margin-bottom: 0; /* Ensures no extra space below it */
+}
+
+/* Optional: Add this if your header flex container needs adjustment for this new element */
+@media (max-width: 768px) {
+    .product-header-controls {
+        /* This rule might already exist; ensures elements stack nicely on smaller screens */
+        flex-direction: column;
+        align-items: flex-start; /* Aligns text to the left when stacked */
+    }
+    .product-count {
+        /* Ensures the count also aligns to the left when stacked */
+        align-self: flex-start;
+    }
+}

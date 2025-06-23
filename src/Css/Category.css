@@ -1,0 +1,213 @@
+/* src/components/Category/Category.css */
+
+/* --- Main Container & Card --- */
+.category-container {
+    background-color: var(--bg-dark-primary); /* Main dark background */
+    color: var(--color-text-light); /* Light text on dark background */
+    padding: 1.5rem !important; /* Override Bootstrap default padding */
+    border-radius: 1rem !important; /* Consistent rounded corners */
+    margin-top: 2rem; /* Add some top margin for spacing from navbar/top */
+    margin-bottom: 2rem; /* Add some bottom margin */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4); /* Deeper shadow for the container */
+}
+
+.category-card {
+    background-color: var(--bg-dark-secondary) !important; /* Slightly lighter dark for card */
+    border-radius: 1rem !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important; /* Subtle border */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Softer, deeper shadow for the card */
+}
+
+/* --- Headers & Titles --- */
+.category-title {
+    color: var(--color-accent) !important; /* Gold/Brown accent for title */
+    font-weight: 700;
+    font-size: 2.2rem;
+    letter-spacing: 0.8px;
+    margin-bottom: 0;
+}
+
+.total-categories-text {
+    /* Corrected: This text should be light, as it's on a dark background */
+    color: var(--color-text-dark);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.total-categories-badge {
+    background-color: var(--color-light) !important; /* Light Periwinkle badge */
+    color: var(--color-dark) !important; /* Dark text on badge */
+    padding: 0.5em 0.7em;
+    font-size: 0.9em;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    border-radius: 0.5rem; /* Rounded badge */
+}
+
+/* --- Add Category Button --- */
+.add-category-btn {
+        background-color: var(--color-light) !important; /* Deep Navy for header */
+    color: white !important; /* Light Periwinkle for header text */
+    font-weight: bold;
+    border: none !important;
+    border-radius: 2rem !important; /* Pill shape */
+    padding: 0.6rem 1.8rem !important;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-category-btn:hover {
+    background-color: var(--color-dark) !important; /* Slightly darker gold/brown on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Search Input Group --- */
+.category-search-input-group .category-search-icon {
+    background-color: var(--color-accent) !important; /* Gold/Brown for icon background */
+    border: 1px solid black;
+    color: var(--color-dark) !important; /* Dark icon color */
+    border-radius: 0.5rem 0 0 0.5rem !important; /* Rounded left side */
+    padding: 0.75rem 1rem !important; /* Match input padding */
+}
+
+.category-search-input-group .category-search-control {
+    background-color: rgba(135, 132, 132, 0.1) !important; /* Semi-transparent white */
+    border: 1px solid rgba(255, 255, 255, 0.2) !important; /* Subtle border */
+    color: var(--color-text-light) !important; /* Light text for input */
+    border-radius: 0 0.5rem 0.5rem 0 !important; /* Rounded right side */
+    padding: 0.75rem 1rem !important;
+    font-size: 0.95rem;
+}
+
+.category-search-input-group .category-search-control::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important; /* Lighter placeholder */
+}
+
+.category-search-input-group .category-search-control:focus {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    border-color: var(--color-medium) !important; /* Medium periwinkle on focus */
+    box-shadow: 0 0 0 0.25rem rgba(120, 134, 199, 0.25) !important;
+}
+
+/* --- Table Styles --- */
+.category-table {
+    --bs-table-bg: var(--bg-dark-secondary); /* Override Bootstrap's table-dark background */
+    --bs-table-color: var(--color-text-light); /* Override Bootstrap's table-dark text color */
+    border: 1px solid rgba(255, 255, 255, 0.1) !important; /* Consistent border for the whole table */
+    border-radius: 0.8rem; /* Soften table corners */
+    overflow: hidden; /* Ensures borders/bg respect border-radius */
+}
+
+.category-table thead th {
+    background-color: var(--color-dark) !important; /* Deep Navy for header */
+    color: var(--color-light) !important; /* Light Periwinkle for header text */
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding: 1rem 0.75rem;
+    border-color: rgba(255, 255, 255, 0.15) !important; /* Border between header cells */
+}
+
+/* Corrected hover effect for table body rows */
+.category-table tbody tr {
+    
+    background-color: var(   --color-light);
+    color: var(--color-text-darkdark) !important; /* Smooth transition for both */
+}
+
+ 
+
+.category-table tbody td {
+    border-color: rgba(255, 255, 255, 0.08) !important; /* Lighter border for cells */
+    padding: 0.8rem 0.75rem;
+}
+
+/* Image in table */
+.category-image {
+    border: 1px solid rgba(255, 255, 255, 0.2) !important; /* Subtle image border */
+    border-radius: 0.5rem; /* Slightly rounded image corners */
+    object-fit: cover; /* Ensures image fills the space nicely */
+    background-color: rgba(255, 255, 255, 0.05); /* Background for transparent images */
+}
+
+.no-image-text {
+    color: rgba(255, 255, 255, 0.5) !important; /* Lighter gray for "No Image" */
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+/* No categories found message */
+.no-categories-found {
+    padding: 2rem !important;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* --- Action Buttons (Edit/Delete) --- */
+.edit-category-btn {
+    background-color: var(--color-warning) !important; /* Orange */
+    border: none !important;
+    /* Corrected: Set text color to light for visibility */
+    color: var(--color-text-light) !important;
+    border-radius: 0.4rem !important; /* Slightly less rounded than main buttons */
+    padding: 0.5rem 0.65rem !important; /* Smaller padding for icon buttons */
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.edit-category-btn:hover {
+    background-color: #e09200 !important; /* Darker orange on hover */
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.delete-category-btn {
+    background-color: var(--color-danger) !important; /* Red */
+    border: none !important;
+    /* Corrected: Set text color to light for visibility */
+    color: var(--color-text-light) !important;
+    border-radius: 0.4rem !important;
+    padding: 0.5rem 0.65rem !important;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.delete-category-btn:hover {
+    background-color: #c0392b !important; /* Darker red on hover */
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Alert Styling --- */
+.custom-alert {
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1050; /* Above modals */
+    min-width: 300px;
+    max-width: 90%;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    font-weight: 500;
+    padding: 1rem 1.5rem;
+}
+
+.custom-alert.alert-success {
+    background-color: var(--color-success) !important;
+    color: var(--color-text-light) !important;
+    border-color: var(--color-success) !important;
+}
+
+.custom-alert.alert-danger {
+    background-color: var(--color-danger) !important;
+    color: var(--color-text-light) !important;
+    border-color: var(--color-danger) !important;
+}
+
+.custom-alert .btn-close {
+    filter: invert(1) grayscale(1) brightness(2); /* Makes it white/light */
+    opacity: 0.8;
+}

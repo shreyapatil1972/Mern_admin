@@ -1,0 +1,111 @@
+/* src/components/ProjectedRoute/Sidebar.css */
+
+.sidebar-container {
+    width: 20%;
+    height: 100vh;
+    background-color: var(--color-dark); /* Deep Navy/Indigo */
+    color: var(--color-text-light); /* Light text for contrast */
+    padding: 1.5rem;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2); /* Softened shadow */
+    display: flex;
+    flex-direction: column; /* Still use column to stack title and nav */
+    /* REMOVED: justify-content: space-between; */
+    position: sticky;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+.sidebar-title {
+    color: var(--color-light); /* Light Periwinkle/Dusty Blue for the title */
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-align: center;
+    letter-spacing: 1px;
+    padding-top: 0.5rem;
+}
+
+.sidebar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav-item {
+    margin-top: 1rem; /* Space between list items */
+}
+
+/* Style for all NavLinks and the Logout button */
+.sidebar-nav-link,
+.sidebar-logout-btn {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--color-light);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    font-size: 1rem;
+    font-weight: 400;
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+/* Hover effect for NavLinks and Logout button */
+.sidebar-nav-link:hover,
+.sidebar-logout-btn:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--color-lightest);
+    transform: translateX(5px);
+    cursor: pointer;
+}
+
+/* Styles for the active NavLink */
+.sidebar-nav-link-active {
+    background-color: var(--color-medium);
+    color: var(--color-lightest);
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transform: translateX(0);
+}
+
+/* Ensure active link maintains its style on hover */
+.sidebar-nav-link-active:hover {
+    background-color: var(--color-medium);
+    color: var(--color-lightest);
+    transform: translateX(0);
+}
+
+.sidebar-divider {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 1.5rem 0;
+}
+
+/* REMOVED: .sidebar-logout-wrapper */
+/* REMOVED: margin-top: auto from .sidebar-logout-wrapper */
+
+.sidebar-logout-btn {
+    background: none;
+    border: none;
+    /* Margin for logout button handled by .sidebar-nav-item */
+}
+
+/* Icon specific styling */
+.sidebar-icon {
+    font-size: 1.1rem;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+/* Icon color changes on hover/active */
+.sidebar-nav-link:hover .sidebar-icon,
+.sidebar-logout-btn:hover .sidebar-icon {
+    color: var(--color-lightest);
+}
+
+.sidebar-nav-link-active .sidebar-icon {
+    color: var(--color-lightest);
+}

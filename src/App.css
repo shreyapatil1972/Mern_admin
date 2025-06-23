@@ -1,0 +1,19 @@
+ /* src/index.css or src/App.css */
+
+:root {
+    --color-lightest: #FFF2F2;    /* Pale Pink/Off-White */
+    --color-light: #A9B5DF;     /* Light Periwinkle/Dusty Blue */
+    --color-medium: #7886C7;    /* Medium Periwinkle/Lavender Blue */
+    --color-dark: #2D336B;      /* Deep Navy/Indigo */
+    --color-text-dark: #2D336B; /* Generally for main text */
+    --color-text-light: #FFF2F2; /* For text on dark backgrounds */
+}
+
+/* Optional: Basic body styling for a consistent look */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* A good default sans-serif */
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-lightest); /* Set overall background */
+    color: var(--color-text-dark);
+} 

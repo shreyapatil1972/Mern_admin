@@ -1,0 +1,151 @@
+/* src/Css/AddCategory.css */
+
+/* --- Modal Global Styles --- */
+.add-category-modal .modal-content {
+    border-radius: 1rem; /* Consistent rounded corners */
+    overflow: hidden; /* Ensures child elements respect border-radius */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Soft, deep shadow */
+}
+
+/* --- Modal Header --- */
+.add-category-modal .modal-header-custom {
+    background-color: var(--color-dark); /* Deep Navy */
+    color: var(--color-lightest); /* Pale Pink/Off-White text */
+    border-bottom: 1px solid var(--color-medium); /* Accent border */
+    padding: 1.5rem 2rem; /* Ample padding */
+}
+
+.add-category-modal .modal-title-custom {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-light); /* Light Periwinkle for title */
+    letter-spacing: 0.5px;
+}
+
+/* Styling the close button icon for dark background */
+.add-category-modal .btn-close {
+    filter: invert(1) grayscale(1) brightness(2); /* Makes it white/light */
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.add-category-modal .btn-close:hover {
+    opacity: 1;
+}
+
+/* --- Modal Body --- */
+.add-category-modal .modal-body-custom {
+    background-color: var(--color-lightest); /* Pale Pink/Off-White for body */
+    color: var(--color-text-dark); /* Deep Navy text */
+    padding: 2rem 2.5rem;
+}
+
+/* --- Form Elements (Inputs) --- */
+.add-category-modal .form-label-custom {
+    color: var(--color-dark); /* Deep Navy for labels */
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block; /* Ensures label takes full width */
+    font-size: 0.95rem;
+}
+
+.add-category-modal .form-control-custom {
+    background-color: #ffffff; /* Pure white input background */
+    border: 1px solid var(--color-light); /* Light Periwinkle border */
+    color: var(--color-text-dark); /* Deep Navy text */
+    border-radius: 0.5rem; /* Slightly rounded inputs */
+    padding: 0.75rem 1rem; /* Comfortable padding */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-category-modal .form-control-custom:focus {
+    border-color: var(--color-medium); /* Medium Periwinkle on focus */
+    box-shadow: 0 0 0 0.25rem rgba(120, 134, 199, 0.25); /* Elegant focus ring */
+    background-color: #ffffff; /* Keep background white on focus */
+}
+
+/* Styling for placeholder text */
+.add-category-modal .form-control-custom::placeholder {
+    color: rgba(45, 51, 107, 0.6); /* Slightly transparent dark navy */
+}
+
+/* Specific for file input to look consistent */
+.add-category-modal .form-control-custom.file-input {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+/* Error Message */
+.add-category-modal .error-message {
+    color: var(--color-danger); /* Assuming --color-danger is defined, else use a red like #dc3545 */
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* --- Modal Footer --- */
+.add-category-modal .modal-footer-custom {
+    background-color: var(--color-dark); /* Deep Navy */
+    border-top: 1px solid var(--color-medium); /* Accent border */
+    padding: 1.5rem 2rem;
+    justify-content: flex-end; /* Push buttons to the right */
+    gap: 1rem; /* Space between buttons */
+}
+
+/* Custom Button Styles */
+.add-category-modal .btn-create-category,
+.add-category-modal .btn-close-modal {
+    font-weight: 600;
+    border-radius: 2rem !important; /* Rounded pill shape */
+    padding: 0.6rem 1.8rem !important; /* Ample padding */
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    border: none !important; /* Remove default borders */
+}
+
+.add-category-modal .btn-create-category {
+    background-color: var(--color-medium) !important; /* Medium Periwinkle */
+    color: var(--color-lightest) !important; /* Lightest text */
+}
+
+.add-category-modal .btn-create-category:hover:not(:disabled) {
+    background-color: var(--color-light) !important; /* Lighter Periwinkle on hover */
+    transform: translateY(-2px); /* Slight lift */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.add-category-modal .btn-create-category:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: var(--color-medium) !important; /* Keep primary color but dimmed */
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+.add-category-modal .btn-close-modal {
+    background-color: transparent !important;
+    border: 1px solid var(--color-light) !important; /* Light Periwinkle border */
+    color: var(--color-light) !important; /* Light Periwinkle text */
+}
+
+.add-category-modal .btn-close-modal:hover:not(:disabled) {
+    background-color: rgba(255, 255, 255, 0.08) !important; /* Subtle light hover on transparent */
+    color: var(--color-lightest) !important; /* Lighter text on hover */
+    transform: translateY(-2px); /* Slight lift */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.add-category-modal .btn-close-modal:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+/* Spinner color for consistency */
+.add-category-modal .spinner-border {
+    color: var(--color-lightest) !important; /* Spinner matches text color */
+}

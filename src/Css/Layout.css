@@ -1,0 +1,46 @@
+/* src/components/Layout/Layout.css */
+
+.main-header {
+    height: 120px;
+    background-color: var(--color-dark); /* Using the dark navy */
+    display: flex; /* For centering or positioning logo */
+    align-items: center; /* Vertically center the logo */
+    padding: 0 2rem; /* Add some padding */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Soft shadow for elegance */
+}
+
+.header-logo {
+    height: 100px; /* Adjust height as needed, it will scale width proportionally */
+    width: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure logo fits within dimensions */
+}
+
+.layout-content-wrapper {
+    display: flex;
+    /* min-height: calc(100vh - 120px); */ /* Account for header height */
+    /* Using 100vh directly might cause scrollbars if header is included in calculations. */
+    /* Flex-grow on main-content-area will handle vertical space */
+    background-color: var(--color-lightest); /* Lightest background for the overall layout */
+}
+
+.main-content-area {
+    flex: 1; /* Allows this div to take up remaining space */
+    padding: 2rem;
+    background-color: #ffffff; /* Pure white or a very slight off-white for the main content area */
+    border-left: 1px solid var(--color-light); /* Subtle border with light periwinkle */
+    box-shadow: inset 0 0 15px rgba(120, 134, 199, 0.1); /* Inset shadow using var(--color-medium) for depth */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+    color: var(--color-text-dark); /* Default text color for main content */
+}
+
+/* Ensure the overall layout maintains full height */
+html, body, #root {
+    height: 100%;
+}
+#root {
+    display: flex;
+    flex-direction: column;
+}
+.layout-content-wrapper {
+    flex-grow: 1; /* Allow the content wrapper to fill remaining vertical space */
+}

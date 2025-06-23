@@ -1,0 +1,24 @@
+/* src/components/Dashboard/Dashboard.css */
+
+.dashboard-card {
+    background-color: var(--color-lightest); /* Pale Pink/Off-White for a light, clean card */
+    padding: 2rem;
+    border-radius: 0.75rem; /* Slightly less rounded for a sleek look */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Softer, more diffused shadow */
+    color: var(--color-text-dark); /* Dark navy text for contrast */
+    border: 1px solid var(--color-light); /* Subtle border for definition */
+}
+
+.dashboard-title {
+    color: var(--color-medium); /* Medium Periwinkle/Lavender Blue for the heading */
+    font-weight: 700; /* Bold the title */
+    margin-bottom: 1rem;
+    font-size: 2rem; /* A good size for a main section title */
+    letter-spacing: 0.5px; /* Subtle letter spacing for elegance */
+}
+
+.dashboard-welcome-text {
+    font-size: 1.1rem; /* Slightly larger for readability */
+    line-height: 1.8; /* Increased line height for better readability */
+    color: var(--color-text-dark); /* Ensure text color is dark navy */
+}

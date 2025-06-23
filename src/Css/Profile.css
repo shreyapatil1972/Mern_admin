@@ -1,0 +1,68 @@
+/* src/components/Profile/Profile.css */
+
+.profile-container {
+    min-height: 90vh; /* Keeps the card centered vertically */
+    /* Background color for the page outside the main content area is handled by Layout.css */
+    /* Remove redundant background and color from here as they are handled by Layout */
+}
+
+.profile-card {
+    width: 100%;
+    max-width: 500px;
+    padding: 2.5rem 3rem; /* Increased padding for more elegance */
+    background-color: #ffffff; /* White background for the card for a clean look */
+    border: 1px solid var(--color-light); /* Subtle border using light periwinkle */
+    border-radius: 0.75rem; /* Consistent border-radius with other components */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Softer, more pronounced shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Optional: Subtle hover effect for the card */
+.profile-card:hover {
+    transform: translateY(-5px); /* Lift card slightly on hover */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* More intense shadow on hover */
+}
+
+.profile-title {
+    color: var(--color-medium); /* Medium Periwinkle for the title */
+    text-align: center;
+    margin-bottom: 0.75rem; /* Adjusted margin */
+    font-size: 2.2rem; /* Larger, more impactful title */
+    font-weight: 700; /* Bold title */
+    letter-spacing: 0.8px; /* Added letter spacing */
+}
+
+.profile-subtitle {
+    color: var(--color-dark); /* Dark navy for the subtitle */
+    font-size: 1.05rem; /* Slightly larger for readability */
+    margin-bottom: 2rem !important; /* Use !important if Bootstrap mb-4 is overriding */
+}
+
+.profile-info-item {
+    font-size: 1.1rem; /* Consistent font size for info items */
+    margin-bottom: 0.8rem; /* Spacing between info lines */
+    color: var(--color-dark); /* Default text color for the line */
+}
+
+.profile-info-label {
+    color: var(--color-medium); /* Medium Periwinkle for labels (e.g., Name:, Email:) */
+    font-weight: 600; /* Slightly bolder labels */
+    margin-right: 0.5rem; /* Space between label and value */
+}
+
+.profile-info-value {
+    color: var(--color-dark); /* Dark navy for the actual values */
+}
+
+.profile-spinner {
+    color: var(--color-medium) !important; /* Force spinner color to elegant periwinkle */
+    width: 3rem; /* Make spinner a bit larger */
+    height: 3rem;
+    border-width: 0.3em !important; /* Make spinner border thicker */
+}
+
+.profile-error-message {
+    color: red; /* Keep red for error messages */
+    text-align: center;
+    font-weight: 500;
+}

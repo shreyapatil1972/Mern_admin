@@ -1,0 +1,174 @@
+/* src/components/Product/AddProduct.css */
+
+/* --- Modal Global Styles --- */
+.add-product-modal .modal-content {
+    border-radius: 1rem; /* Consistent rounded corners */
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Modal Header --- */
+.modal-header-custom {
+    background-color: var(--color-dark); /* Deep Navy */
+    color: var(--color-lightest); /* Pale Pink/Off-White text */
+    border-bottom: 1px solid var(--color-medium); /* Accent border */
+    padding: 1.5rem 2rem;
+}
+
+.modal-header-custom .modal-title-custom {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-light); /* Light Periwinkle for title */
+    letter-spacing: 0.5px;
+}
+
+/* Styling the close button icon for dark background */
+.modal-header-custom .btn-close {
+    filter: invert(1) grayscale(1) brightness(2); /* Makes it white/light */
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.modal-header-custom .btn-close:hover {
+    opacity: 1;
+}
+
+/* --- Modal Body --- */
+.modal-body-custom {
+    background-color: var(--color-lightest); /* Pale Pink/Off-White for body */
+    color: var(--color-text-dark); /* Deep Navy text */
+    padding: 2rem 2.5rem;
+}
+
+/* --- Form Elements --- */
+.form-label-custom {
+    color: var(--color-dark); /* Deep Navy for labels */
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block; /* Ensures label takes full width */
+    font-size: 0.95rem;
+}
+
+.form-control-custom,
+.form-select-custom {
+    background-color: #ffffff; /* Pure white input background */
+    border: 1px solid var(--color-light); /* Light Periwinkle border */
+    color: var(--color-text-dark); /* Deep Navy text */
+    border-radius: 0.5rem; /* Slightly rounded inputs */
+    padding: 0.75rem 1rem; /* Comfortable padding */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control-custom:focus,
+.form-select-custom:focus {
+    border-color: var(--color-medium); /* Medium Periwinkle on focus */
+    box-shadow: 0 0 0 0.25rem rgba(120, 134, 199, 0.25); /* Elegant focus ring */
+    background-color: #ffffff; /* Keep background white on focus */
+}
+
+/* Styling for placeholder text */
+.form-control-custom::placeholder {
+    color: rgba(45, 51, 107, 0.6); /* Slightly transparent dark navy */
+}
+
+/* Specific for file input to look consistent */
+.form-control-custom.file-input {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+/* Customizing the checkbox */
+.form-check-custom .form-check-input {
+    border: 1px solid var(--color-light);
+    background-color: #ffffff;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    /* Ensure proper size for elegance */
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-top: 0.2em; /* Align with label text */
+}
+
+.form-check-custom .form-check-input:checked {
+    background-color: var(--color-medium); /* Medium Periwinkle when checked */
+    border-color: var(--color-medium);
+}
+
+.form-check-custom .form-check-input:focus {
+    border-color: var(--color-medium);
+    box-shadow: 0 0 0 0.25rem rgba(120, 134, 199, 0.25);
+}
+
+.form-check-custom .form-check-label {
+    color: var(--color-text-dark); /* Dark Navy label for checkbox */
+    font-weight: 500;
+    margin-left: 0.6rem; /* Space between checkbox and label */
+    font-size: 1rem;
+}
+
+/* Error Message */
+.error-message {
+    color: var(--color-danger); /* Red for error messages */
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* --- Modal Footer --- */
+.modal-footer-custom {
+    background-color: var(--color-dark); /* Deep Navy */
+    border-top: 1px solid var(--color-medium); /* Accent border */
+    padding: 1.5rem 2rem;
+    justify-content: flex-end; /* Push buttons to the right */
+}
+
+.btn-add-product,
+.btn-cancel-modal {
+    font-weight: 600;
+    border-radius: 2rem !important; /* Rounded pill shape */
+    padding: 0.6rem 1.8rem !important; /* Ample padding */
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    border: none !important; /* Remove default borders */
+}
+
+.btn-add-product {
+    background-color: var(--color-medium) !important; /* Medium Periwinkle */
+    color: var(--color-lightest) !important; /* Lightest text */
+}
+
+.btn-add-product:hover:not(:disabled) {
+    background-color: var(--color-light) !important; /* Lighter Periwinkle on hover */
+    transform: translateY(-2px); /* Slight lift */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.btn-add-product:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: var(--color-medium) !important; /* Keep primary color but dimmed */
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+.btn-cancel-modal {
+    background-color: transparent !important;
+    border: 1px solid var(--color-light) !important; /* Light Periwinkle border */
+    color: var(--color-light) !important; /* Light Periwinkle text */
+}
+
+.btn-cancel-modal:hover:not(:disabled) {
+    background-color: rgba(255, 255, 255, 0.08) !important; /* Subtle light hover on transparent */
+    color: var(--color-lightest) !important; /* Lighter text on hover */
+    transform: translateY(-2px); /* Slight lift */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.btn-cancel-modal:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
