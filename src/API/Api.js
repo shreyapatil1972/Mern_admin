@@ -1,16 +1,14 @@
 import axios from 'axios';
 
 // Base URL for the API
-export const BASE_URL =
-  import.meta.env?.VITE_API_URL || process.env.REACT_APP_API_URL;
-
+export const BASE_URL = "http://localhost:8000/api";
 
 // Axios instance
 const axiosInstance = axios.create({
   baseURL: BASE_URL,
 });
+ 
 
-// Utility: Get token from localStorage
 export const getToken = () => localStorage.getItem("token");
 
 // Utility: Get user object from localStorage
@@ -55,7 +53,7 @@ export const apiRequest = async (endpoint, data = {}, method = "get") => {
 
 // Auth APIs
 export const loginAPI = async (payload) => {
-  const data = await apiRequest("/api/user/login", payload, "post");
+  const data = await apiRequest("/user/login", payload, "post");
   if (data?.token) {
     localStorage.setItem("token", data.token);
     if (data.user) {
@@ -66,49 +64,49 @@ export const loginAPI = async (payload) => {
 };
 
 export const registerAPI = async (payload) => {
-  return await apiRequest("/api/user/register", payload, "post");
+  return await apiRequest("/user/register", payload, "post");
 };
 
 // User Info
 export const getUserInfo = async () => {
-  return await apiRequest("/api/user/getUserInfo", {}, "get");
+  return await apiRequest("/user/getUserInfo", {}, "get");
 };
  
 export const createCategory = async (payload)=>{
-  return await apiRequest("/api/category/create",payload,"post")
+  return await apiRequest("/category/create",payload,"post")
 }
 
 export const deleteCategory = async (ID) => {
-  return await apiRequest(`/api/category/deleteCategory/${ID}`, {}, "delete");
+  return await apiRequest(`/category/deleteCategory/${ID}`, {}, "delete");
 };
 
 export const updateCategory = async (ID, payload) => {
-  return await apiRequest(`/api/category/updateCategory/${ID}`, payload, "put");
+  return await apiRequest(`/category/updateCategory/${ID}`, payload, "put");
 };
 
 export const getAllCategories = async () => {
-  return await apiRequest("/api/category/getAllCategories", {}, "get");
+  return await apiRequest("/category/getAllCategories", {}, "get");
 };
 
 // products api
 export const createproduct =async(formData) => {
-  return await apiRequest("/api/product/create",formData,"post")
+  return await apiRequest("/product/create",formData,"post")
 };
 
 export const deleteproduct = async (ID) => {
-  return await apiRequest(`/api/product/deleteProduct/${ID}`, {}, "delete");
+  return await apiRequest(`/product/deleteProduct/${ID}`, {}, "delete");
 };
 
 export const getAllproducts = async () => {
-  return await apiRequest("/api/product/getAllProducts", {}, "get");
+  return await apiRequest("/product/getAllProducts", {}, "get");
 };
 
 export const getproductByID = async (id) =>{
-   return await apiRequest(`/api/product/getProductById/${id}`, {}, 'get');
+   return await apiRequest(`/product/getProductById/${id}`, {}, 'get');
 };
 
 export const updateproduct = async (id, formData) => {
-  return await apiRequest(`/api/product/updateProduct/${id}`, formData, 'put' );
+  return await apiRequest(`/product/updateProduct/${id}`, formData, 'put' );
 };
 
 
